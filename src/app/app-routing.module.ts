@@ -5,15 +5,13 @@ import { LoginComponent } from './components/login/login.component';
 import { LoginSuccessComponent } from './components/login-success/login-success.component';
 
 const routes: Routes = [
-  { path: 'login', LoginComponent,
-    canActivate: [LoginGuard]
+  { path: 'login', component:LoginComponent,
   },
-
   {
-   path: 'suceess', LoginComponent,
+   path: 'suceess', component:LoginComponent,
    canActivate: [LoginGuard]
   },
-  { path: '', LoginComponent}
+  { path: '', component:LoginComponent}
 ];
 
 @NgModule({

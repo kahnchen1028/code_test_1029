@@ -1,1 +1,46 @@
-<p>login works!</p>
+<article>
+  <header>
+    <img src="../../../assets/images/logo.png" alt="Logo">   
+    <h2>LILEE Systems T-Clould Loing</h2>
+  </header>
+  <section>
+    <section class="auth" >
+      <div class="row">
+        <mat-form-field class="form-field">
+            <input matInput placeholder="domain" formControlName="domain"
+                type="text" />
+            <mat-error *ngIf="passwordFormControl.hasError('required')" >
+                email is required
+            </mat-error>
+            <mat-error *ngIf="passwordFormControl.hasError('email')">
+                email pattern error
+            </mat-error>
+        </mat-form-field>
+    </div>
+      <div class="row">
+        <mat-form-field class="form-field">
+            <input matInput placeholder="email" formControlName="email"
+                type="text" />
+            <mat-error *ngIf="passwordFormControl.hasError('required')" >
+                email is required
+            </mat-error>
+            <mat-error *ngIf="passwordFormControl.hasError('email')">
+                email pattern error
+            </mat-error>
+        </mat-form-field>
+    </div>
+      <div class="row">
+        <mat-form-field class="form-field">
+            <input matInput placeholder="password" formControlName="password"
+                type="password" />
+            <mat-error *ngIf="passwordFormControl.hasError('required')" >
+                Password is required
+            </mat-error>
+            <mat-error *ngIf="passwordFormControl.hasError('invalidPasswordPattern')">
+                Password pattern error
+            </mat-error>
+        </mat-form-field>
+    </div>
+  </section>
+</article>
+
